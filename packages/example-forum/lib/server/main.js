@@ -8,8 +8,8 @@ export * from './email/notifications.js';
 
 import './email/templates.js';
 
-import './seed/seed_posts.js';
-import './seed/seed_categories.js';
+// import './seed/seed_posts.js';
+// import './seed/seed_categories.js';
 
 import './comments/index.js';
 

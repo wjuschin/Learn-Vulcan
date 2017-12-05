@@ -43,6 +43,7 @@ registerFragment(`
   fragment PostsPage on Post {
     ...PostsList
     body
+    newTitle
     htmlBody
   }
 `);

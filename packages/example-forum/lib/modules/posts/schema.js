@@ -93,6 +93,20 @@ const schema = {
     order: 20,
     searchable: true
   },
+    /**
+    newTitle
+  */
+  newTitle: {
+    type: String,
+    optional: false,
+    max: 500,
+    viewableBy: ['guests'],
+    insertableBy: ['members'],
+    editableBy: ['members'],
+    control: 'text',
+    order: 25,
+    searchable: true
+  },
   /**
     Slug
   */

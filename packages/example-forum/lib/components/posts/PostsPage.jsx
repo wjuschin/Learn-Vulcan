@@ -22,12 +22,16 @@ class PostsPage extends Component {
 
       const htmlBody = {__html: post.htmlBody};
 
+      const newTitle = {__html: post.newTitle};
+
       return (
         <div className="posts-page">
 
           <Components.HeadTags url={Posts.getPageUrl(post, true)} title={post.title} image={post.thumbnailUrl} description={post.excerpt} />
           
           <Components.PostsItem post={post} currentUser={this.props.currentUser} />
+
+          {post.newTitle ? <div className="posts-page-body" dangerouslySetInnerHTML={newTitle}></div> : null}
 
           {post.htmlBody ? <div className="posts-page-body" dangerouslySetInnerHTML={htmlBody}></div> : null}
 

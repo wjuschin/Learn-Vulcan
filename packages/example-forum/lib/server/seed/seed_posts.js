@@ -1,4 +1,4 @@
-import { newMutation, registerSetting, getSetting } from 'meteor/vulcan:core';
+/* import { newMutation, registerSetting, getSetting } from 'meteor/vulcan:core';
 import moment from 'moment';
 import { Posts } from '../../modules/posts/index.js';
 import { Comments } from '../../modules/comments/index.js';
@@ -31,7 +31,7 @@ if (getSetting('forum.seedOnStart')) {
   });
 
   var toTitleCase = function (str) {
-    return str.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
+    return str.replace(/\w\S*/ /*g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
   };
 
   var createPost = function (slug, postedAt, username, thumbnail) {

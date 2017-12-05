@@ -2,6 +2,7 @@ import { Components, registerComponent, withCurrentUser } from 'meteor/vulcan:co
 import React, { PropTypes, Component } from 'react';
 import classNames from 'classnames';
 import Helmet from 'react-helmet';
+import Sidebar from './Sidebar.jsx';
 
 const Layout = ({currentUser, children, currentRoute}) =>
 
@@ -20,11 +21,17 @@ const Layout = ({currentUser, children, currentRoute}) =>
   
     <div className="main">
 
-      <Components.FlashMessages />
+    <div className="sidebar">Categories</div>
 
-      <Components.Newsletter />
+      <div className="main-column">
 
-      {children}
+        <Components.FlashMessages />
+
+        <Components.Newsletter />
+
+        {children}
+
+      </div>
 
     </div>
   

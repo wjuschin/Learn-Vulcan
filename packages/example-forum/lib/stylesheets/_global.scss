@@ -24,3 +24,27 @@ a{
 .message.error {
   color: $red;
 }
+
+.main-column {
+  width: 80%;
+  float: right;
+}
+
+.sidebar{
+  background: #999;
+  width: 20%;
+  float: left;
+  padding-top: 10px;
+  flex-shrink: 0;
+  @include small{
+    display: none;
+  }
+}
+
+.categories-list{
+  display: block;
+  .posts-category{
+    display: inline-block;
+    margin-bottom: 5px;
+  }
+}
