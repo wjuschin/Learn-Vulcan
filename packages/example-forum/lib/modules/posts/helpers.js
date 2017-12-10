@@ -113,7 +113,7 @@ Posts.isPending = function (post) {
  * We need the current user so we know who to upvote the existing post as.
  * @param {String} url
  */
-Posts.checkForSameUrl = function (url) {
+Posts.checkForSameUrl = function (url, newTitle) {
 
   // check that there are no previous posts with the same link in the past 6 months
   var sixMonthsAgo = moment().subtract(6, 'months').toDate();

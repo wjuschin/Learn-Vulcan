@@ -1,4 +1,4 @@
-/*import { Categories } from '../../modules/categories/index.js';
+import { Categories } from '../../modules/categories/index.js';
 import { Utils, newMutation, getSetting } from 'meteor/vulcan:core';
 
 if (getSetting('forum.seedOnStart')) {
@@ -75,6 +75,7 @@ if (getSetting('forum.seedOnStart')) {
   } else if (!Categories.find().count()) {
     console.log('// inserting dummy categories');
     // else if there are no categories yet, create dummy categories
+    /*
     dummyCategories.forEach(category => {
       newMutation({
         collection: Categories,
@@ -82,6 +83,8 @@ if (getSetting('forum.seedOnStart')) {
         validate: false,
       });
     });
+    */
+
   }
 
 }

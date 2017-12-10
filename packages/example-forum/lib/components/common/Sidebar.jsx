@@ -8,7 +8,7 @@ const Sidebar = () => {
     <div>
       <div className="sidebar">
         <div className="posts-list-header-catgeories">
-          <Components.CategoriesList />
+          <Components.CategoriesSidebar />
         </div>
       </div>
     </div>

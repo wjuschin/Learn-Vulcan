@@ -40,11 +40,12 @@ function PostsNewRateLimit (post, user) {
 }
 addCallback('posts.new.validate', PostsNewRateLimit);
 
+
 /**
  * @summary Check for duplicate links
  */
 function PostsNewDuplicateLinksCheck (post, user) {
-  if(!!post.url && Posts.checkForSameUrl(post.url)) {
+  if(!!post.url && Posts.checkForSameUrl(post.url), Posts.checkForSameTitle(post.newTitle)) {
     const DuplicateError = createError('posts.link_already_posted', {message: 'posts.link_already_posted'});
     throw new DuplicateError({data: {break: true, url: post.url}});
   }
@@ -58,7 +59,7 @@ addCallback('posts.new.sync', PostsNewDuplicateLinksCheck);
  */
 function PostsEditDuplicateLinksCheck (modifier, post) {
   if(post.url !== modifier.$set.url && !!modifier.$set.url) {
-    Posts.checkForSameUrl(modifier.$set.url);
+    Posts.checkForSameUrl(modifier.$set.url), Posts.checkForSameTitle(modifier.$set.newTitle);
   }
   return modifier;
 }
